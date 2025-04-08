@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zana Brigaderia</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="doces.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="shortcut icon" type="image/png" href="logoz.png">
+    <link rel="stylesheet" href="https://use.typekit.net/hiq3uju.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const tezeSection = document.getElementById("teze");
+            const menu = document.querySelector('.normal');
+            const menuToggle = document.querySelector('.menu-toggle');
+            const dropdownLinks = document.querySelectorAll('.normal a');
+
+            // Adiciona animação de destaque ao chegar na seção
+            window.addEventListener("scroll", function () {
+                const rect = tezeSection.getBoundingClientRect();
+                if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
+                    tezeSection.classList.add("highlight");
+                    setTimeout(() => tezeSection.classList.remove("highlight"), 1500);
+                }
+            });
+
+            // Fecha o menu responsivo ao clicar em um link dentro dele
+            dropdownLinks.forEach(link => {
+                link.addEventListener("click", function () {
+                    menu.classList.remove("active"); // Fecha o menu
+                });
+            });
+
+            // Alterna o menu ao clicar no ícone do menu
+            menuToggle.addEventListener("click", function () {
+                menu.classList.toggle("active");
+            });
+        });    
+    </script>
+</head>
+
+<body>
+
+
+
+    <!--  CABEÇALHO -->
+    <header>
+        <span class="menu-toggle" onclick="toggleMenu()">
+            <i class="bi bi-justify"></i></span>
+
+        <a href="index.html" class="logo">
+            <img src="Logo principal.png" alt="Logo">
+        </a>
+
+        <nav class="normal">
+            <div class="dropdown">
+                <a href="./index.html#teze" class="dropbtn">PRODUTOS</a>
+                <div class="dropdown-content">
+                    <a href="doces.html">Doces</a>
+                    <a href="personalizados.html">Itens Personalizados</a>
+                    <a href="presentes.html">Presentes</a>
+                </div>
+            </div>
+            <a href="./docehistoria.html">DOCE HISTÓRIA</a>
+            <a href="https://api.whatsapp.com/send/?phone=%2B55119999999999&text&type=phone_number&app_absent=0"
+                target="_blank">PEDE AQUI</a>
+            <a href="./duvidas.html">DÚVIDAS AÇUCARADAS</a>
+        </nav>
+
+        <div class="search-container">
+            <input type="text" placeholder="Buscar...">
+            <button><i class="bi bi-search"></i></button>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://api.whatsapp.com/send/?phone=%2B55119999999999&text&type=phone_number&app_absent=0"
+                target="_blank"><i class="bi bi-whatsapp"></i></a>
+            <a href="https://www.instagram.com/brigaderiazana/" target="_blank"><i class="bi bi-instagram"></i></a>
+        </div>
+    </header>
+
+
+
+    <!--  CONTEÚDO/ DOCES -->
+
+    <section class="doces">
+        <h2>DOCES</h2>
+        <div class="doce-container">
+
+            <!-- Primeira linha -->
+            <div class="doce-card">
+                <a class="linkdoce"
+                    href="https://api.whatsapp.com/send/?phone=%2B55119999999999&text&type=phone_number&app_absent=0"
+                    target="_blank">
+                    <img src="./FOTOS DOS DOCES/Coxinha Brigadeiro.jpg" alt="Coxinha brigadeiro com morango"
+                        class="doce-img">
+                    <div class="doce-info">
+                        <h3>COXINHA BRIGADEIRO COM MORANGO</h3>
+                        <p class="descricao">Essa é a verdadeira explosão de sabores. Feita de brigadeiro gourmet,
+                            moldado em torno de um morango fresco. A combinação do
+                            doce intenso com a leve acidez e suculência do morango cria um equilíbrio perfeito em cada
+                            mordida. </p>
+                        <p1>R$ 5,50 | Mínimo 30 unidades</p>
+                            <button class="btn-orcamento">FAZER ORÇAMENTO</button>
+                </a>
+            </div>
+        </div>
+
+
+
+        <div class="doce-card">
+            <a class="linkdoce"
+                href="https://api.whatsapp.com/send/?phone=%2B55119999999999&text&type=phone_number&app_absent=0"
+                target="_blank">
+                <img src="./FOTOS DOS DOCES/Coxinha Ninho.jpg" alt="Coxinha ninho com morango" class="doce-img">
+                <div class="doce-info">
+                    <h3>COXINHA NINHO COM MORANGO</h3>
+                    <p class="descricao">Essa coxinha é uma combinação doce e irresistível que
+                        conquista pelo sabor e pela criatividade! Feita com morango fresco envolvido com massa de leite Ninho. A mistura perfeita entre o doce e o azedinho.</p>
+                    <p1>R$ 5,50 | Mínimo 30 unidades</p>
+                        <button class="btn-orcamento">FAZER ORÇAMENTO</button>
+            </a>
+        </div>
+        </div>
+
+
+        <div class="doce-card">
+            <a class="linkdoce"
+                href="https://api.whatsapp.com/send/?phone=%2B55119999999999&text&type=phone_number&app_absent=0"
+                target="_blank">
+                <img src="./FOTOS DOS DOCES/Brigadeiro.jpg" alt="Brigadeiro" class="doce-img">
+                <div class="doce-info">
+                    <h3>BRIGADEIRO</h3>
+                    <p class="descricao">O tradicional brigadeiro brasileiro. Ele mantém a base clássica de leite
+                        condensado, chocolate e manteiga, mas é
+                        preparado com ingredientes de alta qualidade, como chocolates finos e cacau em pó premium. </p>
+                    <p1>R$ 5,00 | Mínimo 30 unidades</p>
+                        <button class="btn-orcamento">FAZER ORÇAMENTO</button>
+            </a>
+        </div>
+        </div>
+
+        <div class="doce-card">
+            <a class="linkdoce"
+                href="https://api.whatsapp.com/send/?phone=%2B55119999999999&text&type=phone_number&app_absent=0"
+                target="_blank">
+                <img src="./FOTOS DOS DOCES/Brigadeiro Branco.jpg" alt="Brigadeiro branco" class="doce-img">
+                <div class="doce-info">
+                    <h3>BRIGADEIRO BRANCO</h3>
+                    <p class="descricao">Essa é uma uma deliciosa variação do tradicional brigadeiro ao leite. Feito com
+                        leite condensado e chocolate branco, proporcionando uma textura cremosa com sabor doce e suave.
+                        Ótima opção para quem quer algo diferente!
+                    </p>
+                    <p1>R$ 5,00 | Mínimo 30 unidades</p>
+                        <button class="btn-orcamento">FAZER ORÇAMENTO</button>
+            </a>
+        </div>
+        </div>
+
+
+
+        <div class="doce-card">
+            <a class="linkdoce"
+                href="https://api.whatsapp.com/send/?phone=%2B55119999999999&text&type=phone_number&app_absent=0"
+                target="_blank">
+                <img src="./FOTOS DOS DOCES/Beijinho.jpg" alt="Beijinho" class="doce-img">
+                <div class="doce-info">
+                    <h3>BEIJINHO</h3>
+                    <p class="descricao">Feito à base de leite condensado, coco ralado e açúcar. Enrolado e coberto com
+                        coco ralado, seu sabor é doce e sua textura é
+                        macia, proporcionando uma experiência agradável a quem o saboreia. </p>
+                    <p1>R$ 5,00 | Mínimo 30 unidades</p>
+                        <button class="btn-orcamento">FAZER ORÇAMENTO</button>
+            </a>
+        </div>
+        </div>
+
+        <div class="doce-card">
+            <a class="linkdoce"
+                href="https://api.whatsapp.com/send/?phone=%2B55119999999999&text&type=phone_number&app_absent=0"
+                target="_blank">
+                <img src="./FOTOS DOS DOCES/Ninho com Nutella.jpg" alt="Ninho com Nutella" class="doce-img">
+                <div class="doce-info">
+                    <h3>NINHO COM NUTELLA</h3>
+                    <p class="descricao">Esse brigadeiro possui uma textura incrível e um sabor suave e aconchegante.
+                        Feito com Leite condensado e leite em pó e cobertura de Nutella. Uma explosão de sabor rico e
+                        achocolatado ao doce</p>
+                    <p1>R$ 5,00 | Mínimo 30 unidades</p>
+                        <button class="btn-orcamento">FAZER ORÇAMENTO</button>
+            </a>
+        </div>
+        </div>
+
+        <!-- Segunda linha -->
+        <div class="doce-card">
+            <a class="linkdoce"
+                href="https://api.whatsapp.com/send/?phone=%2B55119999999999&text&type=phone_number&app_absent=0"
+                target="_blank">
+                <img src="./FOTOS DOS DOCES/Meio Amargo.jpg" alt="Meio amargo" class="doce-img">
+                <div class="doce-info">
+                    <h3>MEIO AMARGO</h3>
+                    <p class="descricao">Essa é uma versão sofisticada e equilibrada do tradicional
+                        brigadeiro brasileiro. Feito com chocolate meio amargo de alta qualidade, leite condensado e
+                        manteiga, ele tem um sabor menos doce, destacando as notas intensas do cacau. </p>
+                    <p1>R$ 5,50 | Mínimo 30 unidades</p>
+                        <button class="btn-orcamento">FAZER ORÇAMENTO</button>
+            </a>
+        </div>
+        </div>
+
+        <div class="doce-card">
+            <a class="linkdoce"
+                href="https://api.whatsapp.com/send/?phone=%2B55119999999999&text&type=phone_number&app_absent=0"
+                target="_blank">
+                <img src="./FOTOS DOS DOCES/Bicho de pé.jpg" alt="Bicho de pé" class="doce-img">
+                <div class="doce-info">
+                    <h3>BICHO DE PÉ</h3>
+                    <p class="descricao">O bicho de pé é feito com leite condensado, leite em pó e nesquik, que conferem
+                        um sabor frutado e doce à receita, criando uma apresentação colorida e apetitosa. Essa sobremesa
+                        é perfeita para festas e celebrações </p>
+                    <p1>R$ 5,50 | Mínimo 30 unidades</p>
+                        <button class="btn-orcamento">FAZER ORÇAMENTO</button>
+            </a>
+        </div>
+        </div>
+
+        <div class="doce-card">
+            <a class="linkdoce"
+                href="https://api.whatsapp.com/send/?phone=%2B55119999999999&text&type=phone_number&app_absent=0"
+                target="_blank">
+                <img src="./FOTOS DOS DOCES/Café.jpg" alt="Café" class="doce-img">
+                <div class="doce-info">
+                    <h3>CAFÉ</h3>
+                    <p class="descricao">Brigadeiro feito com leite condensado, chocolate em pó e, claro,
+                        café, trazendo um sabor intenso e aromático à receita, com o toque marcante e levemente amargo
+                        do café. Uma verdadeira explosão de sabor em uma única mordida! </p>
+                    <p1>R$ 5,50 | Mínimo 30 unidades</p>
+                        <button class="btn-orcamento">FAZER ORÇAMENTO</button>
+            </a>
+        </div>
+        </div>
+
+        <div class="doce-card">
+            <a class="linkdoce"
+                href="https://api.whatsapp.com/send/?phone=%2B55119999999999&text&type=phone_number&app_absent=0"
+                target="_blank">
+                <img src="./FOTOS DOS DOCES/Oreo.jpg" alt="Óreo" class="doce-img">
+                <div class="doce-info">
+                    <h3>OREO</h3>
+                    <p class="descricao">Esse é um doce que une a cremosidade do tradicional brigadeiro
+                        com a crocância e o sabor inconfundível dos biscoitos Oreo. Preparado com leite
+                        condensado, manteiga e Oreo triturados, criando uma textura rica e cheia de
+                        contrastes.</p>
+                    <p1>R$ 5,50 | Mínimo 30 unidades</p>
+                        <button class="btn-orcamento">FAZER ORÇAMENTO</button>
+            </a>
+        </div>
+        </div>
+
+        <!-- Terceira linha -->
+        <div class="doce-card">
+            <a class="linkdoce"
+                href="https://api.whatsapp.com/send/?phone=%2B55119999999999&text&type=phone_number&app_absent=0"
+                target="_blank">
+                <img src="./FOTOS DOS DOCES/Limão.jpg" alt="Limão" class="doce-img">
+                <div class="doce-info">
+                    <h3>LIMÃO</h3>
+                    <p class="descricao">Essa é uma explosão refrescante de sabor cítrico em forma de
+                        doce! Feito com leite condensado e raspas de limão, resultando em um equilíbrio perfeito
+                        trazendo um toque
+                        especial e refrescante ao paladar! </p>
+                    <p1>R$ 5,00 | Mínimo 30 unidades</p>
+                        <button class="btn-orcamento">FAZER ORÇAMENTO</button>
+            </a>
+        </div>
+        </div>
+
+        <div class="doce-card">
+            <a class="linkdoce"
+                href="https://api.whatsapp.com/send/?phone=%2B55119999999999&text&type=phone_number&app_absent=0"
+                target="_blank">
+                <img src="./FOTOS DOS DOCES/Doce de leite com coco queimado.jpg" alt="Doce de Leite com coco queimado"
+                    class="doce-img">
+                <div class="doce-info">
+                    <h3>DOCE DE LEITE COM COCO QUEIMADO</h3>
+                    <p class="descricao">Esse brigadeiro é uma verdadeira joia da culinária brasileira. Ele combina a
+                        cremosidade do doce de leite com o sabor único e
+                        caramelizado do coco queimado, criando uma harmonia deliciosa. Feito com leite condensado e doce
+                        de leite.</p>
+                    <p1>R$ 5,50 | Mínimo 30 unidades</p>
+                        <button class="btn-orcamento">FAZER ORÇAMENTO</button>
+            </a>
+        </div>
+        </div>
+
+        <!-- <div class="doce-card">
+                <a class="linkdoce" href="https://api.whatsapp.com/send/?phone=%2B55119999999999&text&type=phone_number&app_absent=0" target="_blank">
+                <img src="" alt="Surpresa de uva" class="doce-img">    
+                <div class="doce-info">
+                    <h3>SURPRESA DE UVA</h3>
+                    <p class="descricao">Docinho refrescante de maracujá, perfeito equilíbrio entre doce e azedo.</p>
+                    <p1>R$ 5,50 | Mínimo 30 unidades</p>
+                    <button class="btn-orcamento">FAZER ORÇAMENTO</button></a>
+                </div>
+            </div>
+             -->
+
+
+        <!-- Quarta linha -->
+
+
+        <div class="doce-card">
+            <a class="linkdoce"
+                href="https://api.whatsapp.com/send/?phone=%2B55119999999999&text&type=phone_number&app_absent=0"
+                target="_blank">
+                <img src="./FOTOS DOS DOCES/Pistache.jpg" alt="Pistache" class="doce-img">
+                <div class="doce-info">
+                    <h3>PISTACHE</h3>
+                    <p class="descricao">Feito com leite condensado e pasta de
+                        pistache, resultando em um doce cremoso, com um sabor único e marcante, que combina a doçura do
+                        leite condensado com o sabor levemente salgado e a textura crocante do pistache.</p>
+                    <p1>R$ 6,00 | Mínimo 30 unidades</p>
+                        <button class="btn-orcamento">FAZER ORÇAMENTO</button>
+            </a>
+        </div>
+        </div>
+
+
+        </div>
+    </section>
+
+    <!--  RODAPÉ -->
+    <footer>
+        <div class=" footer-content">
+            <div class="footer-logo">
+                <img src="Logo principal.png" alt="Logo">
+            </div>
+            <div class="contact-info">
+                <a href="https://api.whatsapp.com/send/?phone=%2B55119999999999&text&type=phone_number&app_absent=0"
+                    p><i class="bi bi-whatsapp"></i><span>(11) 12345-6789</span></p></a>
+                <a href="https://www.instagram.com/brigaderiazana/" p><i
+                        class="bi bi-instagram"></i><span>@brigaderiazana</span></p></a>
+                <a href="" p><i class="bi bi-envelope"></i><span>contato@zana.com.br</span></p></a>
+            </div>
+            <div class="icones">
+                <a href="https://api.whatsapp.com/send/?phone=%2B55119999999999&text&type=phone_number&app_absent=0" i
+                    class="bi bi-whatsapp"></a>
+                <a href="https://www.instagram.com/brigaderiazana/" i class="bi bi-instagram"></a>
+                <a href="" i class="bi bi-envelope"></a>
+            </div>
+            <div class="location"><iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.994360680441!2d-46.701596529189615!3d-23.52193678305532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef86ff238bdd9%3A0x944b346262f31e84!2sSenac%20Lapa%20Scipi%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1742432094883!5m2!1spt-BR!2sbr"
+                    width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>

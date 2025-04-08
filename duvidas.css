@@ -1,0 +1,536 @@
+/*  RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+ 
+/*  CABEÇALHO */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10%;
+    background: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+ 
+.logo img {
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+ 
+.logo img:hover {
+    transform: scale(1.1);
+}
+ 
+nav {
+    display: flex;
+    gap: 12px;
+    margin: auto;
+}
+ 
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
+    transition: 0.3s;
+    /* margin: auto; */
+}
+ 
+nav a:hover {
+    color: #e63946;
+}
+.menu-toggle{
+    display: none;
+}
+ 
+/*  MENU SUSPENSO */
+.dropdown {
+    position: relative;
+    top: 10px;
+}
+ 
+.dropdown-content {
+    display: flex;
+    position: absolute;
+    background-color: white;
+    min-width: 180px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    top: 40px;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(10px);
+    flex-direction: column;
+    text-align: left;
+}
+.dropdown-content a{
+    text-align: left;
+}
+ 
+.dropdown:hover .dropdown-content {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+    /* cursor: pointer; */
+}
+.responsivo{
+    display: none;
+}
+#teze {
+    transition: background-color 0.5s ease-in-out;
+}
+ 
+#teze.highlight {
+    background-color: rgb(255, 255, 255);
+}
+/* Suaviza a rolagem para âncoras */
+html {
+    scroll-behavior: smooth;
+}
+ 
+/* Efeito de destaque quando o elemento é alcançado */
+@keyframes highlight {
+    0% { background-color: #ffffff; }
+    50% { background-color: #ffffff; }
+    100% { background-color: #ffffff; }
+}
+ 
+.highlight {
+    animation: highlight 1.5s ease-in-out;
+}
+ 
+ 
+ 
+/* Barra de Pesquisa */
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 2px solid #fff9f9;
+    border-radius: 20px;
+    padding: 2px 10px;
+    background: #fff1fd;
+    margin-right: 75px;
+}
+ 
+.search-container input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    background: none;
+    width: 150px;
+}
+ 
+.search-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #e63946;
+    font-size: 18px;
+}
+ 
+/*  ESTILIZAÇÃO DOS ÍCONES SOCIAIS */
+.social-icons {
+    display: flex;
+    gap: 15px; /*espaçamento entre ícones */
+}
+ 
+.social-icons a {
+    font-size: 28px; /* Ícones maiores */
+    color: #013458;
+    transition: transform 0.3s ease-in-out, color 0.3s;
+}
+ 
+.social-icons a:hover {
+    transform: scale(1.2); /* Efeito de zoom ao passar o mouse */
+    color: #003d65;
+}
+ 
+ 
+ 
+ 
+/* RODAPÉ */
+footer {
+    background: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+    margin-top: 220px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+ 
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+/*  ÍCONES DO RODAPÉ */
+.contact-info i {
+    font-size: 17px; /* Deixa os ícones do rodapé um pouco maiores */
+    margin-right: 5px; /* Espaçamento entre ícone e texto */
+    color: #e63946;
+}
+.contact-info a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #333;
+}
+.icones {
+    display: none;
+}
+ 
+.footer-logo img {
+    width: 200px;
+}
+ 
+.contact-info p {
+    margin: 5px 0;
+    color: #333;
+    font-size: 14px;
+}
+ 
+.location iframe {
+    border-radius: 10px;
+}
+ 
+ 
+/*  ESTILIZAÇÃO DO CONTEÚDO */
+ 
+ 
+.nossa-historia{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    width: 85%;
+}
+ 
+.diferenciais-container {
+    display: flex;
+    flex-wrap: wrap; /*para a linnha quebrar a depender da tela */
+    gap: 45px;
+    margin-top: 85px ;
+    justify-content: center;
+ 
+ 
+}
+ 
+.diferencial {
+    background: #fff;
+    padding: 40px;
+    width: 700px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    margin-right: 206px;
+    
+    
+}
+.diferencial h3 {
+    font-size: 50px;
+    
+    /* margin-bottom: 19px; */
+    text-align: left;
+    color: #e63946;
+    padding: 30px;
+    font-weight: normal;
+    margin-bottom: 15px;
+    font-family: "ohno-softie-variable", sans-serif;
+    font-variation-settings: 'wght' 623;
+}
+ 
+/* .diferenciais-container img {
+ 
+    width: 200px;
+    margin-right: auto;
+} */
+ 
+.diferencial i {
+    font-size: 40px;
+    color: #e63946;
+    margin-bottom: 10px;
+}
+ 
+.perguntas {
+    font-size: 20px;
+    color: #603624;
+    margin-bottom: 10px;
+    text-align: left;
+    padding: 5px;
+    margin-top: 15px;
+    font-family: "ohno-softie-variable",sans-serif;
+}
+ 
+.diferencial p {
+    font-size: 18px;
+    color: #555;
+    text-align: left;
+    color: #603624;
+    font-weight: normal;
+    margin-bottom: 15px;
+    flex-grow: 1;
+    font-family: "ohno-softie-variable",sans-serif;
+}
+.respostas{
+    padding: 5px;
+    
+}
+    
+
+/* Formulário */
+ 
+.formulario{
+width: 20%;
+/* padding: 30px 20px; */
+}
+ 
+form{
+    background: rgb(255, 255, 255);
+    backdrop-filter: blur(10px); /*blur significa "opacidade"*/
+    border-radius: 10px;
+    padding: 30px 20px;
+    /* max-width: 400px; largura maxima */
+    width: 200%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* desfoque*/
+    margin-top: 62px;
+    
+}
+h5{
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 19px;
+    text-align: center;
+    color: #e63946;
+    font-weight: normal;
+        font-family: "ohno-softie-variable", sans-serif;
+    
+}
+ 
+/*Estilo dos labels: (são os rótulos, etiquetas que identificam os inputs)*/
+ 
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ffffff;   
+ 
+}
+ 
+/*Estilo dos inputs e textarea - NÃO PODE DAR ESPAÇO*/
+ 
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    outline: none;
+    box-shadow: inset 0 1px 3px #1313139e
+}
+ 
+/*Bloquear o redimensionamento / tamanho da caixinha de texto*/
+ 
+textarea{
+    resize: none;
+ 
+}
+ 
+/*Estilo dos checkbox e radio buttons*/
+ 
+input[type="checkbox"]
+input[type="radio"] {
+    margin-right: 8px;
+ 
+}
+ 
+ 
+/*Estilo do boton enviar*/
+ 
+input[type="submit"] {
+    background: #e63946;
+    color: #ffffff; /*Cor do texto "Enviar"*/
+    border: none;
+    padding: 10px 20px; /* margemvertical 10pc / horizontal 20px*/
+    border-radius: 5px;
+    cursor: pointer; /*deixa de ser a seta e vira o dedo apotando*/
+    font-size: 1rem;
+    width: 100%;
+    transition: background 0.3s ease;
+}
+ 
+input[type="file"] {
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+ 
+/*mudar a cor do botão de enviar quando passar o mouse em cima do botão - hover significa sobre*/
+input[type="submit"]:hover{
+    background: #fb6875;
+ 
+}
+ 
+ 
+ 
+/*  MEDIA (RESPONSIVO) */
+@media (max-width: 460px) {
+    .normal {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        position:absolute;
+        top: 50px;
+        right: 10px;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+    }
+ 
+    .menu-icon {
+        display: block;
+    }
+ 
+    .diferenciais-container, .formulario, .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu-toggle{
+        display: flex;
+        font-size: 25px;
+    }
+    .logo img {
+        width: 100px;
+    }
+    .active{
+        display: flex;
+    }
+    .dropdown-content{
+        display: none;
+        filter: opacity(0);
+    }
+    /* .dropdown:hover{
+        display: none;
+    } */
+    .social-icons a{
+        font-size: 19px;
+    }
+    .search-container{
+        display: none;
+    }
+    .search-container button{
+        display: block;
+    }
+    .dropdown{
+        /* display: none; */
+        padding: 10px;
+}
+    .contact-info i {
+        font-size: 10px; /* Deixa os ícones do rodapé um pouco maiores */
+        margin-right: 4px; /* Espaçamento entre ícone e texto */
+        color: #e63946;
+    }
+    .footer-logo img {
+        width: 75px;
+    }
+    footer {
+        background: #f8f8f8;
+        padding: 20px;
+        text-align: center;
+        width: 100% ;
+    }
+    .location iframe {
+        border-radius: 2px;
+    }
+    .contact-info span {
+        display: none;
+    }
+    .contact-info p i {
+        display: flex;
+    }
+    .contact-info {
+        display: none;
+    }
+    .icones{
+        display: flex;
+        gap: 34px;
+        bottom: 2%;
+        font-size: 29px;
+        padding: 4%;
+        color: #e63946;
+    }
+    .icones a {
+        color: #e63946;
+    }
+    .diferenciais-container{
+        margin-top: 30px;
+        flex-wrap: nowrap;
+    }
+    .responsivo{
+        display: flex;
+    }
+    .dropbtn {
+        bottom: 10px;
+        padding: 0px;
+    }
+    /* Responsividade para o campo de dúvidas e o formulário */
+@media (max-width: 760px) {
+    .diferencial {
+        width: 100%; /* Ajusta a largura do campo de dúvidas */
+        margin-right: -57px; /* Centraliza */
+        padding: 20px;/* Reduz o padding */
+    }
+ 
+    .diferencial h3 {
+        font-size: 32px; /* Diminui o tamanho do título */
+    }
+ 
+    .diferencial p {
+        font-size: 14px; /* Ajusta o tamanho do texto */
+    }
+ 
+    .formulario {
+        width: 82%; /* Ajusta a largura do formulário */
+        margin: 0 auto; /* Centraliza */
+        margin-left: 16%;
+    }
+ 
+    form {
+        width: 100%; /* Faz o formulário ocupar a largura disponível */
+        padding: 20px; /* Reduz o padding */
+    }
+ 
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        font-size: 14px; /* Ajusta o tamanho da fonte dos inputs */
+    }
+}
+}
+@media( max-width: 1000px){
+    .diferenciais-container{
+        flex-wrap: nowrap;
+}
+}
+@media( max-width: 1500px){
+    .diferenciais-container{
+        flex-wrap: nowrap;
+}
+}
+ 
+ 

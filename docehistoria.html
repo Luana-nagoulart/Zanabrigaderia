@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<!----------NÁO MEXER A PARTIR DAQUI---------->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zana Brigaderia</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="docehistoria.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="shortcut icon" type="image/png" href="logoz.png">
+        <link rel="stylesheet" href="https://use.typekit.net/hiq3uju.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const tezeSection = document.getElementById("teze");
+            const menu = document.querySelector('.normal');
+            const menuToggle = document.querySelector('.menu-toggle');
+            const dropdownLinks = document.querySelectorAll('.normal a');
+
+            // Adiciona animação de destaque ao chegar na seção
+            window.addEventListener("scroll", function () {
+                const rect = tezeSection.getBoundingClientRect();
+                if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
+                    tezeSection.classList.add("highlight");
+                    setTimeout(() => tezeSection.classList.remove("highlight"), 1500);
+                }
+            });
+
+            // Fecha o menu responsivo ao clicar em um link dentro dele
+            dropdownLinks.forEach(link => {
+                link.addEventListener("click", function () {
+                    menu.classList.remove("active"); // Fecha o menu
+                });
+            });
+
+            // Alterna o menu ao clicar no ícone do menu
+            menuToggle.addEventListener("click", function () {
+                menu.classList.toggle("active");
+            });
+        });    
+    </script>
+</head>
+
+<body>
+
+    <!--  CABEÇALHO -->
+    <header>
+        <span class="menu-toggle" onclick="toggleMenu()">
+            <i class="bi bi-justify"></i></span>
+
+        <a href="index.html" class="logo">
+            <img src="Logo principal.png" alt="Logo">
+        </a>
+
+        <nav class="normal">
+            <div class="dropdown">
+                <a href="./index.html#teze" class="dropbtn">PRODUTOS</a>
+                <div class="dropdown-content">
+                    <a href="doces.html">Doces</a>
+                    <a href="personalizados.html">Itens Personalizados</a>
+                    <a href="presentes.html">Presentes</a>
+                </div>
+            </div>
+            <a href="./docehistoria.html">DOCE HISTÓRIA</a>
+            <a href="https://api.whatsapp.com/send/?phone=%2B55119999999999&text&type=phone_number&app_absent=0"
+                target="_blank">PEDE AQUI</a>
+            <a href="./duvidas.html">DÚVIDAS AÇUCARADAS</a>
+        </nav>
+
+        <div class="search-container">
+            <input type="text" placeholder="Buscar...">
+            <button><i class="bi bi-search"></i></button>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://api.whatsapp.com/send/?phone=%2B55119999999999&text&type=phone_number&app_absent=0"
+                target="_blank"><i class="bi bi-whatsapp"></i></a>
+            <a href="https://www.instagram.com/brigaderiazana/" target="_blank"><i class="bi bi-instagram"></i></a>
+        </div>
+    </header>
+
+
+    <!-- --------NÁO MEXER ATÉ AQUI---------->
+    <!--  SEÇÃO NOSSOS DIFERENCIAIS -->
+    <section class="nossa-historia">
+
+        <div class="caixa-container">
+            <div class="caixa">
+
+                <h3>Prazer, SuZANA</h3>
+
+                <p> Somos uma brigaderia apaixonada por transformar momentos simples em doces memórias. Fundada pela
+                    Suzana, uma mulher determinada, criativa e cheia de amor pelo mundo dos sabores. Nossa missão é
+                    levar felicidade a cada mordida.
+                    Tudo começou com a paixão pelo brigadeiro – aquele clássico brasileiro que conquista corações – e a
+                    vontade de compartilhar receitas únicas, feitas com carinho e ingredientes de qualidade. Nossa
+                    brigaderia é um lugar onde tradição e inovação se encontram, oferecendo desde os sabores clássicos
+                    que nos remetem à infância até criações surpreendentes para quem busca algo novo.
+                    Mais do que vender doces, acreditamos na importância de criar conexões. Cada brigadeiro que sai da
+                    nossa cozinha é uma celebração da dedicação e do amor que colocamos em cada detalhe, seja para
+                    adoçar o dia, celebrar um aniversário ou marcar momentos inesquecíveis.</p>
+
+                <p>Nossa história é sobre acreditar nos pequenos gestos, nos grandes sonhos e na capacidade de adoçar o
+                    mundo, um brigadeiro por vez. Venha nos conhecer e descobrir por que cada mordida conta uma
+                    história! </p>
+
+            </div>
+            <div class="foto">
+                <img src="./VÍDEOS/ChatGPT Image 7 de abr. de 2025, 20_25_38.png">
+            </div>
+
+
+        </div>
+    </section>
+
+    <!----------NÁO MEXER A PARTIR DAQUI---------->
+
+    <!--  RODAPÉ -->
+    <footer>
+        <div class=" footer-content">
+            <div class="footer-logo">
+                <img src="Logo principal.png" alt="Logo">
+            </div>
+            <div class="contact-info">
+                <a href="https://api.whatsapp.com/send/?phone=%2B55119999999999&text&type=phone_number&app_absent=0"
+                    p><i class="bi bi-whatsapp"></i><span>(11) 12345-6789</span></p></a>
+                <a href="https://www.instagram.com/brigaderiazana/" p><i
+                        class="bi bi-instagram"></i><span>@brigaderiazana</span></p></a>
+                <a href="" p><i class="bi bi-envelope"></i><span>contato@zana.com.br</span></p></a>
+            </div>
+            <div class="icones">
+                <a href="https://api.whatsapp.com/send/?phone=%2B55119999999999&text&type=phone_number&app_absent=0" i
+                    class="bi bi-whatsapp"></a>
+                <a href="https://www.instagram.com/brigaderiazana/" i class="bi bi-instagram"></a>
+                <a href="" i class="bi bi-envelope"></a>
+            </div>
+            <div class="location"><iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.994360680441!2d-46.701596529189615!3d-23.52193678305532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef86ff238bdd9%3A0x944b346262f31e84!2sSenac%20Lapa%20Scipi%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1742432094883!5m2!1spt-BR!2sbr"
+                    width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+        </div>
+    </footer>
+    <!-- --------NÁO MEXER ATÉ AQUI---------->
+
+</body>
+
+</html>
